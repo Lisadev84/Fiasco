@@ -1,4 +1,6 @@
 # Fiasco
 Site d'un restaurant réaliser à partir d'une maquette (https://grafikart.fr/)
 Travail sur le CSS et media query  
-Reste à finir le footer et la page recettes
+Finaliser les pages liens 
+en cours : Projet à retravailler en PHP
+https://melodic-croissant-de226d.netlify.app/
