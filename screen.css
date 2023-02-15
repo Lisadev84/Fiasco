@@ -129,11 +129,20 @@ img {
     color: #C89446;
     
 }
-.more:hover {
+.more a:hover {
     text-decoration: underline;
 }
-.more::after {
-    content: " >";
+.more a::after {
+    content: " ";
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    margin-left: 0.5em;
+    background: url(img/arrow-right.svg) center center no-repeat;
+    transition: transform 0.3s;
+}
+.more a:hover::after {
+    transform: translateX(5px);
 }
 
 .block-img {
@@ -253,10 +262,11 @@ img {
     font-size: 0.875rem;
     color: #FFF;
     font-family: "Source Sans Pro", serif;
-    transition: background .3s, border-color .3s;
+    transition: background-color .3s, border-color .3s;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border-radius : 2px;
 }
 
 .reservation select {
@@ -305,7 +315,8 @@ select option {
 }
 
 .recipes {
-    padding: 50px;
+    padding: 50px 0;
+    background: top left / 100vw auto url(img/news-bg.jpg) no-repeat;
 }
 
 .recipes-list {
@@ -321,11 +332,21 @@ select option {
 .recipes-list-item {
     border-bottom: solid 1px #F2F2F2;
     margin-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
 
 }
 .recipes-date strong {
-    font-size: 1.5 rem;
+    font-size: 1.75 rem;
+    display: block;
+    line-height: 1.2;
 }
+.recipes-date {
+    width: 70px; 
+    flex: none;
+    line-height: 1;
+}
+
 .recipes-list-item:last-child {
     border-bottom: 0;
 
@@ -339,7 +360,34 @@ select option {
     max-width: 920px;
     margin-left : auto;
 }
-.recipes-list
+
+.recipes-list-item p{
+    margin-top: 0;
+}
+.map {
+    width: 100%;
+    height: 450px;
+}
+.footer {
+    background: #383838 bottom right no-repeat;
+    font-weight: 300;
+    color: #FFF;
+    padding: 40px 0;
+}
+.footer-title {
+    color: #C89446;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+}
+.footer-column {
+    margin-bottom: 2rem;
+}
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
 
 
 
@@ -376,6 +424,8 @@ select option {
     .baseline-welcome{
         font-size: 3.75rem; /*60px / 16px, avantage rem : on peut mettre en place du responsive, media query */
     }
+    
+  
    
    
 }
@@ -555,17 +605,78 @@ select option {
         margin-top: 0;
         margin-right: 0;
     }
+    .recipes {
+        padding: 60px 0;
+        background-size: 589px auto;
+        background-attachment: fixed;
+    }
+    .recipes .title {
+        text-align: right; 
+    }
+    .recipes .container > p {
+        text-align: right;
+        max-width: 716px;
+        margin-left: auto;
+    }
+    .recipes-date {
+        width: 95px; 
+    }
+    .recipes-list {
+       margin-top: 60px ; 
+       margin-bottom: 60px; 
+    }
+    .recipes-list-item {
+        margin-top : 1.4rem;
+        padding-bottom: 1.4rem;
+    }
+    .recipes-list-item:last-child {
+        padding-bottom: 0;
+    
+    }
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    
+    .footer-column {
+        width: 300px;
+        flex: none;
+        margin-right: 50px;
+    }
+    .footer-column:first-child {
+        width: 450px;
+       
+    }
+    .footer-column :last-child {
+        margin-right: 0;
+        flex: none;
+    } 
+    .footer ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .footer a {
+        text-decoration: underline;
+    }
+    .footer a:hover {
+        color: #C89446;
+    }
+    .footer-credits span {
+        font-weight: bold;
+    }
+    .footer-credits {
+        font-size: 0.9em;
+    }
+    .footer {
+        background-image: url(img/splash.png) ;
+
+    }
+  
+    
+
 }
-.recipes {
-    padding: 60px;
-}
-.recipes .title {
-    text-align: right; 
-}
-.recipes .container > p {
-    text-align: right;
-    max-width: 716px;
-    margin-left: auto;
-}
+
 
 
